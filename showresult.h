@@ -30,6 +30,9 @@ public slots:
 
 
 
+private slots:
+     void on_pushButton_clicked();
+
 private:
     Ui::showResult *ui;
 };

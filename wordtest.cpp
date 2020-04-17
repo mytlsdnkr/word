@@ -36,10 +36,12 @@ void wordTest::getRand(){
     while(1){
     srand(time(0));
     current=rand()%numOfWord;
-    if(a[current].check==0)
+    if(a[current].check==0){
+        a[current].check=1;
         order.push_back(current);
         return;
     }
+}
 }
 
 void wordTest::setTest(){
@@ -49,6 +51,8 @@ void wordTest::setTest(){
         emit sendData(a,order);
         showresult->setModal(true);
         showresult->exec();
+        this->close();
+        return;
     }
     getRand();
     ui->label->setText(a[current].word);
