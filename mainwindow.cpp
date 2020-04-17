@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QDir dir;
+    dir.mkdir("data");
 }
 
 MainWindow::~MainWindow()

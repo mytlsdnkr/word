@@ -19,13 +19,13 @@ class showResult : public QDialog
 
 public:
     explicit showResult(QWidget *parent = nullptr);
-    void fillTable(test a,vector<int> &order);
+    void fillTable(test *a,vector<int> &order);
 
 
     ~showResult();
 
-private slots:
-     void getData(test a,vector<int> &order);
+public slots:
+     void getData(test *a,vector<int> &order);
 
 
 

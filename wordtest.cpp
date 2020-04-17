@@ -44,10 +44,15 @@ void wordTest::getRand(){
 
 void wordTest::setTest(){
     if(numOftest==numOfWord){
-        //show result!
+        showResult *showresult = new showResult;
+        connect(this,&wordTest::sendData,showresult,&showResult::getData);
+        emit sendData(a,order);
+        showresult->setModal(true);
+        showresult->exec();
     }
     getRand();
     ui->label->setText(a[current].word);
+    ui->lineEdit->clear();
     numOftest++;
 
 }
@@ -98,9 +103,14 @@ void wordTest::on_pushButton_clicked()
 void wordTest::on_pushButton_2_clicked()
 {
     showResult *showresult = new showResult;
-    connect(this,SIGNAL(sendData(test)),showresult,SLOT(getData(test)));
+    connect(this,&wordTest::sendData,showresult,&showResult::getData);
     emit sendData(a,order);
     showresult->setModal(true);
     showresult->exec();
 
+}
+
+void wordTest::on_pushButton_3_clicked()
+{
+    this->close();
 }
