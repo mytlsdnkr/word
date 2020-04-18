@@ -18,7 +18,10 @@ showResult::~showResult()
     delete ui;
 }
 void showResult::fillTable(test *a,vector<int> &order){
+
     int i=0;
+    int count=0;
+    float score=0.0;
 
 
     for(i=0;i<order.size();i++){
@@ -27,11 +30,13 @@ void showResult::fillTable(test *a,vector<int> &order){
     color.setGreen(255);
     color.setBlue(255);
 
-      if(!a[i].mean.contains(a[i].input)){
+      if(QString::compare(a[i].mean,a[i].input)){
           color.setRed(255);
           color.setGreen(0);
           color.setBlue(0);
-        }
+        }else{
+          count++;
+      }
 
 
         ui->tableWidget->setItem(i,0,new QTableWidgetItem(a[i].word));
@@ -44,6 +49,13 @@ void showResult::fillTable(test *a,vector<int> &order){
                   ui->tableWidget->item(i,2)->setBackgroundColor(color);
 
     }
+
+    score=((float)count/(float)order.size())*100;
+
+    ui->label->setNum(score);
+
+
+
 
 
 

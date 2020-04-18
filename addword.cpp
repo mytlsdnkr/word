@@ -74,7 +74,7 @@ void AddWord::on_pushButton_2_clicked()
     QString mean;
     mean=ui->lineEdit_2->text();
     QString line;
-    line=QString("%1 %2\n").arg(word,mean);
+    line=QString("%1=%2\n").arg(word,mean);
 
     QString filename=createFile();
 

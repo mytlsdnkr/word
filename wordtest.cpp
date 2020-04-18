@@ -16,7 +16,7 @@ void wordTest::getData(){
             QTextStream in(&inputFile);
             while(!in.atEnd()){
                 QString line=in.readLine();
-                QStringList list=line.split(" ");
+                QStringList list=line.split("=");
                 a[k].word=list[0];
                 a[k].mean=list[1];
                 a[k].check=0;

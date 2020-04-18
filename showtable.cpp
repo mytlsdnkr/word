@@ -32,7 +32,7 @@ void ShowTable::onFileRead(QString file,int remove){
         QTextStream in(&inputFile);
         while(!in.atEnd()){
             QString line=in.readLine();
-            QStringList list=line.split(" ");
+            QStringList list=line.split("=");
             this->addList(list,i);
           i++;
         }
