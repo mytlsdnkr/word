@@ -20,7 +20,9 @@ SOURCES += \
     addword.cpp \
     main.cpp \
     mainwindow.cpp \
+    meantest.cpp \
     removesuccess.cpp \
+    showmeanresult.cpp \
     showresult.cpp \
     showtable.cpp \
     showword.cpp \
@@ -30,7 +32,9 @@ HEADERS += \
     addsuccess.h \
     addword.h \
     mainwindow.h \
+    meantest.h \
     removesuccess.h \
+    showmeanresult.h \
     showresult.h \
     showtable.h \
     showword.h \
@@ -40,7 +44,9 @@ FORMS += \
     addsuccess.ui \
     addword.ui \
     mainwindow.ui \
+    meantest.ui \
     removesuccess.ui \
+    showmeanresult.ui \
     showresult.ui \
     showtable.ui \
     showword.ui \

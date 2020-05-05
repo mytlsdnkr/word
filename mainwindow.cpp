@@ -3,6 +3,7 @@
 #include "addword.h"
 #include "showword.h"
 #include "wordtest.h"
+#include "meantest.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -44,4 +45,12 @@ void MainWindow::on_pushButton_3_clicked()
     wordTest wordtest;
     wordtest.setModal(true);
     wordtest.exec();
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    meantest meantest;
+    meantest.setModal(true);
+    meantest.exec();
+
 }
