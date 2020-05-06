@@ -63,3 +63,17 @@ void ShowWord::on_pushButton_clicked()
     this->close();
 
 }
+
+void ShowWord::on_pushButton_2_clicked()
+{
+    QFile file;
+    file.remove(this->filename);
+    this->close();
+
+}
+
+void ShowWord::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    this->filename=item->text();
+
+}

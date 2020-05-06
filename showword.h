@@ -28,9 +28,11 @@ signals:
 private slots:
     void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
-
-
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_listWidget_itemClicked(QListWidgetItem *item);
 
 private:
     Ui::ShowWord *ui;
